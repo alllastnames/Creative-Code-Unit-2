@@ -78,7 +78,20 @@ function draw()
   rect(width*0.05,height*0.95,width*0.3,height*0.05)
 
 -- Draws Mouse cloud
-  fill(169,204,255)
-  ellipse(mouseX, mouseY, width * 0.05, height * 0.1)
+ 
+
+  fill (255,199,106)
+  ellipse(mouseX, mouseY, width * 0.1, height * 0.2)
+
+  fill (255,244,239)
+  ellipse(mouseX, mouseY, width * 0.09, height * 0.175)
+
+fill(255,247,149)
+  ellipse(mouseX, mouseY, width * 0.025, height * 0.05)
+  ellipse(mouseX, mouseY, width * 0.0075, height * 0.2)
+  ellipse(mouseX, mouseY, width * 0.1, height * 0.015)
+
+
+
   
 end
