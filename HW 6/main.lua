@@ -11,6 +11,15 @@ irisChange = 0.5
 rectX = -100
 rectX2 = 500
 
+-- side bar color variables
+barR = 0
+barG = 246
+barB = 255
+
+-- background color variables
+backR = 0
+backG = 32
+backB = 255
 require("L5")
 
 function setup()
@@ -22,10 +31,29 @@ function setup()
 end
 
 function draw()
-  background(0, 32, 255)
+  
 
   -- side bars
 
+  if irisSize < 150 then
+    barR = 0 
+    barG = 246 
+    barB = 255
+    backR = 0
+    backG = 32
+    backB = 255
+  elseif irisSize > 150 then
+    barR = 255 
+    barG = 254
+    barB = 210
+    backR = 255
+    backG = 255
+    backB = 30
+  end
+
+  background(backR, backG, backB)
+
+  fill(barR, barG, barB)
   rect(rectX,height/2,width*0.5,height)
   rectX = rectX + 0.5
   
@@ -33,6 +61,7 @@ function draw()
     rectX = -100
   end
 
+  
   rect(rectX2,height/2,width*0.5,height)
   rectX2 = rectX2 - 0.5
   
@@ -70,6 +99,8 @@ function draw()
 
   irisSize = irisSize + irisChange
 
-    fill(0, 246, 255)
+    
+
+
 
 end
