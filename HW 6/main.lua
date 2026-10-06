@@ -33,7 +33,7 @@ end
 function draw()
   
 
-  -- side bars
+-- changes the color of the background and sidebars after the circle reaches a specific size
 
   if irisSize < 150 then
     barR = 0 
@@ -51,9 +51,9 @@ function draw()
     backB = 30
   end
 
-  background(backR, backG, backB)
+  background(backR, backG, backB) 
 
-  fill(barR, barG, barB)
+  fill(barR, barG, barB) 
   rect(rectX,height/2,width*0.5,height)
   rectX = rectX + 0.5
   
