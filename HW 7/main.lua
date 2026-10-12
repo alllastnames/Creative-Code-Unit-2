@@ -6,7 +6,7 @@ function setup()
   rectMode(CENTER)
   noStroke()
   windowTitle("Alex Wilkins HW 7")
-  describe('Patterns')
+  describe('Draws linear and radial patterns')
   background(255)
 end
 
