@@ -4,8 +4,8 @@ function setup()
   size(600, 200)
 
   
-  windowTitle("Basic sketch")
-  describe('Draws a yellow background')
+  windowTitle("Alex Wilkins HW 8")
+  describe('Tells a short story')
   textSize(20)
   textAlign(CENTER)
 end
