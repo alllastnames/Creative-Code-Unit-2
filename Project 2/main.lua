@@ -15,11 +15,14 @@ function setup()
   background(255)
   textSize(20)
   textAlign(CENTER)
+  RandomizeY()
 end
 
 FballYMove = 11
 ballSpeed = 5
-FSquareNumber = {1,2,3,4,5,6,7}
+FSquareNumber = {2,3,4,}
+SquarePosition = random(FSquareNumber)
+SqYPos = {1,2,3,4}
 
 function draw()
   -- clear screen
@@ -52,22 +55,32 @@ function draw()
 
   
 
-  push()
-  fill(0)
-  circle(61,FballYMove,20)
-  pop()
+
 
   FballYMove = FballYMove + ballSpeed
 
   if FballYMove > 489 or FballYMove < 11 then
     ballSpeed = ballSpeed * -1
+  SquarePosition = random(FSquareNumber)
+  RandomizeY()
+end
+
+for i = 1,SquarePosition do
+    fill (255,72,176)
+    square(61,SqYPos[i],40)
+  end
 
     push()
-  for i = random(FSquareNumber),7, random(FSquareNumber) do
-    fill (255,72,176)
-    square(61,i*64,40)
-  end
+  fill(0)
+  circle(61,FballYMove,20)
   pop()
+
+end
+
+function RandomizeY()
+  for i = 1,SquarePosition do
+    SqYPos[i] = random{1,2,3,4}*128-64
+  end 
+
   
-  end
 end
