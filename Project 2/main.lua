@@ -38,6 +38,7 @@ Sq3YPos = {1,2,3,4}
 SOpacity = {64,128,192,255}
 
 
+
 function draw()
   -- clear screen
   background(255)
@@ -78,7 +79,7 @@ function draw()
 end
 
 for i = 1,SquarePosition do
-    fill (255,72,176,SOpacity[i])
+    fill (255,232,0,SOpacity[i])
     noStroke()
     square(62,SqYPos[i],40)
   end
@@ -118,7 +119,7 @@ for i = 1,SSquarePosition do
 end
 
 for i = 1,TSquarePosition do
-    fill (255,72,176,SOpacity[i])
+    fill (0,120,191,SOpacity[i])
     noStroke()
     square(190,Sq3YPos[i],40)
   end
